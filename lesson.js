@@ -67,35 +67,35 @@ function training() {
 }
 
 
-async function readSchedule() {
-    try {
-        const start = await mySheduleDay(8)
-        console.log(start);
-
-        const first = await wakeUp()
-        console.log(first);
-
-        const second = await washUp()
-        console.log(second);
-
-        const third = await cooking()
-        console.log(third);
-
-        const fourth = await driving()
-        console.log(fourth);
-
-        const fifth = await working()
-        console.log(fifth);
-
-        const six = await meetFriend()
-        console.log(six);
-
-        const seventh = await training()
-        console.log(seventh);
-
-    } catch (e) {
-        console.error(e);
-    }
-}
-
-readSchedule()
+mySheduleDay(8)
+    .then(w => {
+        console.log(w);
+        return wakeUp()
+    })
+    .then(w => {
+        console.log(w);
+        return washUp()
+    })
+    .then(w => {
+        console.log(w);
+        return cooking()
+    })
+    .then(w => {
+        console.log(w);
+        return driving()
+    })
+    .then(w => {
+        console.log(w);
+        return working()
+    })
+    .then(w => {
+        console.log(w);
+        return meetFriend()
+    })
+    .then(w => {
+        console.log(w);
+        return training()
+    })
+    .then(w => {
+        console.log(w);
+    })
